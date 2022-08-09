@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/containerMusic"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#282828">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/buttonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:padding="2dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageMusic"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_music_item"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
+
+    <!--<com.chibde.visualizer.CircleBarVisualizer
+        android:visibility="gone"
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/blast"
+        android:layout_width="312dp"
+        android:layout_height="312dp"
+        custom:layout_constraintStart_toStartOf="@id/imageMusic"
+        custom:layout_constraintEnd_toEndOf="@id/imageMusic"
+        custom:layout_constraintBottom_toBottomOf="@id/imageMusic"
+        custom:layout_constraintTop_toTopOf="@id/imageMusic"
+        />-->
+
+    <TextView
+        android:layout_marginTop="32dp"
+        android:id="@+id/textMusicName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="marquee"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageMusic"
+        tools:text="Come to me" />
+
+    <TextView
+        android:id="@+id/textMusicArtist"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ellipsize="marquee"
+        android:fontFamily="@font/roboto"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/textMusicName"
+        app:layout_constraintStart_toStartOf="@id/textMusicName"
+        app:layout_constraintTop_toBottomOf="@id/textMusicName"
+        tools:text="One Republic" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/progressMusic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:progress="50"
+        android:progressTint="@color/color_green"
+        android:thumbTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.75" />
+
+    <TextView
+        android:id="@+id/textMusicCurrentTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/progressMusic"
+        app:layout_constraintTop_toBottomOf="@id/progressMusic"
+        tools:text="2:46" />
+
+    <TextView
+        android:id="@+id/textMusicTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/progressMusic"
+        app:layout_constraintTop_toBottomOf="@id/progressMusic"
+        tools:text="3:05" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/buttonShuffle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:padding="2dp"
+        tools:src="@drawable/ic_shuffle_off"
+        android:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonPrevious"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.90" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/buttonPrevious"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackgroundBorderless"
+        android:padding="2dp"
+        android:src="@drawable/ic_previous"
+        app:layout_constraintBottom_toBottomOf="@id/buttonShuffle"
+        app:layout_constraintEnd_toStartOf="@id/buttonManage"
+        app:layout_constraintStart_toEndOf="@id/buttonShuffle"
+        app:layout_constraintTop_toTopOf="@id/buttonShuffle"
+        app:tint="@color/white" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/buttonManage"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:background="@color/color_green"
+
+        android:src="@drawable/ic_play"
+        app:contentPadding="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/buttonShuffle"
+        app:layout_constraintEnd_toStartOf="@id/buttonNext"
+        app:layout_constraintStart_toEndOf="@id/buttonPrevious"
+        app:layout_constraintTop_toTopOf="@id/buttonShuffle"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/buttonNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackgroundBorderless"
+        android:padding="2dp"
+        android:src="@drawable/ic_next"
+        app:layout_constraintBottom_toBottomOf="@id/buttonShuffle"
+        app:layout_constraintEnd_toStartOf="@id/buttonReplay"
+        app:layout_constraintStart_toEndOf="@id/buttonManage"
+        app:layout_constraintTop_toTopOf="@id/buttonShuffle"
+        app:tint="@color/white" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/buttonReplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:padding="2dp"
+        tools:src="@drawable/ic_replay_off"
+        android:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/buttonShuffle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/buttonNext"
+        app:layout_constraintTop_toTopOf="@id/buttonShuffle" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

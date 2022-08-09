@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Music Player</string>
+    <string name="text_item_music_current_position">%1$d</string>
+    <string name="text_search">Search</string>
+</resources>

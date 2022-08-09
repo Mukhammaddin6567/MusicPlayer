@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/musicContainer"
+    android:layout_marginBottom="8dp">
+
+        <TextView
+            android:textColor="@color/white"
+            android:id="@+id/textMusicPositionItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/roboto"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="01" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageMusicItem"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_music_item"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textMusicPositionItem"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent" />
+
+        <TextView
+            android:id="@+id/textMusicNameItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/textMusicArtistItem"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageMusicItem"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Nice for what" />
+
+        <TextView
+            android:id="@+id/textMusicArtistItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/white_darker"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@id/lineItem"
+            app:layout_constraintEnd_toEndOf="@id/textMusicNameItem"
+            app:layout_constraintStart_toStartOf="@id/textMusicNameItem"
+            app:layout_constraintTop_toBottomOf="@id/textMusicNameItem"
+            tools:text="Avinci John" />
+
+        <!--<androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/buttonMoreItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="4dp"
+            android:src="@drawable/ic_more_horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />-->
+
+        <View
+            android:id="@+id/lineItem"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/white_darker"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/textMusicArtistItem"
+            app:layout_constraintTop_toBottomOf="@id/textMusicArtistItem" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

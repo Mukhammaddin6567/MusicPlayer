@@ -1,0 +1,34 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.MusicPlayer" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/color_action_bar</item>
+        <item name="colorPrimaryVariant">@color/color_status_bar</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <!--<item name="searchViewStyle">@style/SearchViewStyle</item>
+&lt;!&ndash;        <item name="android:actionBarWidgetTheme">@style/MyActionBarWidgetTheme</item>&ndash;&gt;
+        <item name="android:textColorHint">@color/white_darker</item>
+        <item name="android:editTextColor">@color/white</item>-->
+    </style>
+
+    <!--<style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">
+        &lt;!&ndash; Gets rid of the search icon &ndash;&gt;
+        <item name="searchIcon">@drawable/ic_search</item>
+        &lt;!&ndash; Gets rid of the search icon when the SearchView is expanded &ndash;&gt;
+        <item name="searchHintIcon">@null</item>
+    </style>
+
+    <style name="MyActionBarWidgetTheme" parent="@android:style/Theme.Holo">
+        <item name="android:textColorHint">@android:color/white</item>
+        <item name="android:editTextColor">@color/white</item>
+        <item name="hintTextColor">@color/white</item>
+    </style>-->
+
+</resources>
